@@ -3,6 +3,7 @@ function setup() {
   createCanvas(200, 200);
   let size = width / 8;
   let s=20;
+  let d=15;
 
   noStroke();
   for(let i = 0; i < 8; i++){
@@ -10,7 +11,19 @@ function setup() {
       // BLANK[1] (hint: rectのx座標は size * i, y座標はsize * j)
       let x=i*s;
       let y=j*s;
+      if((i+j)% 2 === 1){
+       fill(122);
       rect(x,y,s,s);
+
     }
+    if(((i+j)% 2=== 1)&& (j<3)){
+      fill(255,0,0);
+      ellipse(x+s/2, y+s/2, d);
+    }
+   if(((i+j)% 2=== 1)&& (4<j)){
+    fill(0);
+    ellipse(x+s/2, y+s/2, d,d);
+   } 
   }
+}
 }
