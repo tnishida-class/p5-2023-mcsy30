@@ -19,6 +19,7 @@ function draw(){
     size=(cycle-count)+50;
   }
 
-  
+  if(keyIsDown("A".charCodeAt(0))){ count+= 5; }
   ellipse(width / 2, height / 2, size);
+ 
 }
