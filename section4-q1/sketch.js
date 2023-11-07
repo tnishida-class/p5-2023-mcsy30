@@ -21,7 +21,7 @@ function setup(){
   for(let i = 0; i < scores.length; i++){
     // BLANK[1]
   const h = height* scores[i]/100;
-  const x = i*dx +10;
+  const x = i*dx +dx/2;
   const y = height - h;
 
   if(i>0){
