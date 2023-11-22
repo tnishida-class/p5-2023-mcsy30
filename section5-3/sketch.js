@@ -27,6 +27,13 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  if(y==isLeapYear){
+  return 366;
+  }
+
+  else {
+  return 365;
+  }
 }
 
 function daysInMonth(y, m){
@@ -50,7 +57,35 @@ function dayOfYear(y, m, d){
 }
 
 function dayOfWeek(y, m, d){
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==0){
+    return 日
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==1){
+    return 月
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==2){
+    return 火
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==3){
+    return 水
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==4){
+    return 木
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==5){
+    return 金
+  }
+
+  if (dayOfYear(y,m,d)-dayOfYear(1970,1,1)==6){
+    return 土
+  }
   // BLANK[2]
+
 }
 
 function dayOfWeekAsString(dow){
