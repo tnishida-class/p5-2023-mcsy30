@@ -14,12 +14,21 @@ function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){
     let b = balls[i];
-    ellipse(b.x, b.y, b.size);
+   heart(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
   
   }
 }
+
+function heart(x, y, size) {//♡をかく関数
+  beginShape();     
+  vertex(x, y);     
+  bezierVertex(x - size / 2, y - size / 2, x - size, y + size / 3, x, y + size);  
+  bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 2, x, y);  
+  endShape(CLOSE);  
+}
+
 
 function mouseDragged(){
   const dx = mouseX - pmouseX;
